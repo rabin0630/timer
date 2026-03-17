@@ -11,7 +11,7 @@ const updatetimer = () => {
     const second = timeleft % 60 ;
 
     timer.innerHTML = `${minutes.toString().padStart(2,"0")}
-    :${second.toString().padStart(2,"0")}`;
+    : ${second.toString().padStart(2,"0")}`;
 }
 
 const startTimer = () => {
