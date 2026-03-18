@@ -22,6 +22,7 @@ const startTimer = () => {
     if (timeleft === 0){
         clearInterval(interval);
         alert("Times up!");
+        
         timeleft = 1500;
         updatetimer();
     }
@@ -39,3 +40,14 @@ const resetTimer = () => {
 start.addEventListener("click",startTimer);
 stop.addEventListener("click",stopTimer);
 reset.addEventListener("click",resetTimer);
+
+function audio() {
+    // id="btn_audio" の要素を取得
+    const sound = document.getElementById('btn_audio');
+    
+    // 再生位置を先頭に戻す（連打対応）
+    sound.currentTime = 0;
+    
+    // 再生を実行
+    sound.play();
+}
